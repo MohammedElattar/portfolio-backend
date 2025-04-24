@@ -1,0 +1,16 @@
+{
+    "extends": "@adonisjs/tsconfig/tsconfig.app.json",
+    "compilerOptions": {
+        "rootDir": "./",
+        "outDir": "./build",
+        "allowJs": true,
+        "checkJs": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "baseUrl": "./",
+        "paths": {
+            "#modules/*": ["modules/*"]
+        }
+    },
+    "exclude": ["modules_migrations"]
+}

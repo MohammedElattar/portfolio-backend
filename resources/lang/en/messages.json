@@ -1,0 +1,10 @@
+{
+    "created": "created successfully",
+    "updated": "updated successfully",
+    "deleted": "deleted successfully",
+    "logged_in": "User logged in successfully",
+    "access_denied": "Access denied",
+    "title": "Title",
+    "route_not_found": "Could not found the requested resource",
+    "name": "Name"
+}

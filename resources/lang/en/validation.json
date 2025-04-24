@@ -1,0 +1,5 @@
+{
+    "required": "field is required.",
+    "exists": "field is already exists.",
+    "not_exists": "does not exist"
+}
