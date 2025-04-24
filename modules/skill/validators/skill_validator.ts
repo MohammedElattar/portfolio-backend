@@ -17,10 +17,10 @@ export default class SkillValidator extends Validator {
             priority: integerRules(),
             image: inUpdate
                 ? imageRules({
-                      extnames: ['svg'],
+                      extnames: ['svg', 'png'],
                   }).optional()
                 : imageRules({
-                      extnames: ['svg'],
+                      extnames: ['svg', 'png'],
                   }),
         })
     }
