@@ -10,13 +10,13 @@ import { InferInput } from '@vinejs/vine/types'
 export default class SettingValidator extends Validator {
     public static get schema() {
         return createSchemaObject({
-            name: stringRules(),
-            headline: stringRules(),
-            whatsapp: stringRules(),
-            email: emailRules(),
-            github: urlRules(),
-            linkedin: urlRules(),
-            resumeUrl: urlRules(),
+            name: stringRules().optional(),
+            headline: stringRules().optional(),
+            whatsapp: stringRules().optional(),
+            email: emailRules().optional(),
+            github: urlRules().optional(),
+            linkedin: urlRules().optional(),
+            resumeUrl: urlRules().optional(),
         })
     }
 }

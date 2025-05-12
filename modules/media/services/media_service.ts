@@ -110,22 +110,22 @@ export default class MediaService<Model extends CustomModel> {
                 disk: defaultDriveDisk,
                 modelType: getMorphableTypeValue(this.model.constructor as typeof CustomModel),
                 modelId: this.model.$primaryKeyValue as number,
-                path: '_',
+                path: path,
             },
             { client: this.trx }
         )
 
-        path = path.replace(':mediaId', mediaItem.id + '')
+        // path = path.replace(':mediaId', mediaItem.id + '')
 
         await file.moveToDisk(path)
 
-        mediaItem.path = path
-        await mediaItem.save()
-
+        // mediaItem.path = path
+        // await mediaItem.save()
+        //
         return mediaItem
     }
 
     private generatePath(file: any) {
-        return `uploads${sep}:mediaId${sep}${cuid()}.${file.extname}`
+        return `uploads${sep}${cuid()}.${file.extname}`
     }
 }

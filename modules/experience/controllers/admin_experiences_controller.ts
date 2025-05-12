@@ -17,7 +17,7 @@ export default class AdminExperiencesController {
     @inject()
     public async store(_: any, experienceValidator: ExperienceValidator) {
         const data: ExperienceDTO = await experienceValidator.validated()
-        console.log('data', data)
+
         await Experience.create(data)
 
         return createdResponse()

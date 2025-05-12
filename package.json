@@ -61,7 +61,7 @@
         "@adonisjs/lucid": "^21.6.0",
         "@vinejs/vine": "^3.0.1",
         "adonis-lucid-soft-deletes": "^2.1.0",
-        "adonisjs-modules": "file:../adonis-packages/adonis-modules",
+        "adonisjs-modules": "^1.1.0",
         "luxon": "^3.6.0",
         "mysql2": "^3.14.0",
         "p-limit": "^6.2.0",

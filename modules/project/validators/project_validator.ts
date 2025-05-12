@@ -14,12 +14,12 @@ export default class ProjectValidator extends Validator {
         const inUpdate = isUpdate(/.*projects$/)
 
         return createSchemaObject({
-            title: stringRules(),
-            description: longTextRules(),
-            priority: integerRules(),
-            appStore: urlRules().nullable(),
-            googlePlay: urlRules().nullable(),
-            live: urlRules().nullable(),
+            title: stringRules().conditionalSometimes(inUpdate),
+            description: longTextRules().conditionalSometimes(inUpdate),
+            priority: integerRules().conditionalSometimes(inUpdate),
+            appStore: urlRules().nullable().optional(),
+            googlePlay: urlRules().nullable().optional(),
+            live: urlRules().nullable().optional(),
             image: inUpdate ? imageRules().optional() : imageRules(),
         })
     }

@@ -13,8 +13,8 @@ export default class SkillValidator extends Validator {
         const inUpdate = isUpdate(/.*skills$/)
 
         return createSchemaObject({
-            name: stringRules(),
-            priority: integerRules(),
+            name: stringRules().conditionalSometimes(inUpdate),
+            priority: integerRules().conditionalSometimes(inUpdate),
             image: inUpdate
                 ? imageRules({
                       extnames: ['svg', 'png'],
