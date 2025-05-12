@@ -5,7 +5,7 @@ import {
     stringRules,
     urlRules,
 } from '../../../app/utils/validation_rule_helper.js'
-import { InferInput } from '@vinejs/vine/types'
+import { Infer } from '@vinejs/vine/types'
 
 export default class SettingValidator extends Validator {
     public static get schema() {
@@ -21,4 +21,4 @@ export default class SettingValidator extends Validator {
     }
 }
 
-export type SettingDTO = InferInput<typeof SettingValidator.schema>
+export type SettingDTO = Infer<typeof SettingValidator.schema>

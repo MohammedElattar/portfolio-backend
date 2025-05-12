@@ -15,7 +15,7 @@ export default class ExperienceValidator extends Validator {
 
         return createSchemaObject({
             title: stringRules().conditionalSometimes(inUpdate),
-            startDate: inUpdate ? dateRules().optional() : dateRules,
+            startDate: inUpdate ? dateRules().optional() : dateRules(),
             endDate: inUpdate ? dateRules().afterField('startDate').nullable().optional() : dateRules().afterField('startDate').nullable(),
             description: longTextRules().conditionalSometimes(inUpdate),
             companyId: foreignKeyRules().conditionalSometimes(inUpdate),
